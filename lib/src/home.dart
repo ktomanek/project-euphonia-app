@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'generated/l10n/app_localizations.dart';
+import 'modes/local_transcribe_mode_controller.dart';
 import 'modes/train_mode_controller.dart';
 import 'modes/transcribe_mode_controller.dart';
 import 'repos/phrases_repository.dart';
@@ -35,6 +36,7 @@ class _HomeControllerState extends State<HomeController> {
   static final List<Widget> _widgetOptions = <Widget>[
     const TrainModeController(),
     const TranscribeModeController(),
+    const LocalTranscribeModeController(),
     const Center(
       child: IconButton(
         icon: Icon(Icons.construction),
@@ -115,6 +117,9 @@ class _HomeControllerState extends State<HomeController> {
             icon: const Icon(Icons.hearing),
             label: AppLocalizations.of(context)!.transcribeModeTitle,
           ),
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.hearing),
+            label: 'Local')
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue,

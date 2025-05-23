@@ -111,3 +111,10 @@ Replace `COUNTRY_CODE` with the appropriate two-letter ISO 639-1 language code (
 **Contribute your changes:** Once you have added the translations, add the file to the repository following our [contributing guidelines](CONTRIBUTING.md).
 
 Thank you for helping to make our app accessible to a wider audience!
+
+
+## Local Transcription
+
+The "Local" tab uses a local moonshine model provided with [sherpa_onnx](https://pub.dev/packages/sherpa_onnx) library to perform
+on-device transcription. To add supported model, download `sherpa-onnx-moonshine-tiny-en-int8.tar.bz2` from [sherpa asr models](https://github.com/k2-fsa/sherpa-onnx/releases/tag/asr-models)
+and move the unzipped files under `assets/moonshine-tiny/` directory.
